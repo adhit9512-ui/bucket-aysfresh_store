@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kontak</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  background: #ff6f91;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* NAV */
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* CONTACT */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fff0f5;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* INFO */
+.info p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* SOSMED */
+.sosmed {
+  margin-top: 25px;
+}
+
+.sosmed a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* WARNA */
+.wa { background: #25D366; }
+.ig { background: #E4405F; }
+.fb { background: #1877F2; }
+
+.sosmed a:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* MAP */
+.map {
+  margin-top: 30px;
+}
+
+iframe {
+  width: 85%;
+  height: 320px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* FOOTER */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="logo">aysfresh_store</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">Tentang</a>
+    <a href="product.html">Produk</a>
+    <a href="contact.html">Kontak</a>
+  </nav>
+</header>
+
+<section class="contact">
+  <h2>Kontak Kami</h2>
+
+  <div class="info">
+    <p>📍 Jl. Mawar No.123, Indonesia</p>
+    <p>📞 +6281380085810</p>
+    <p>📧 buketku@gmail.com</p>
+  </div>
+
+  <!-- SOSIAL MEDIA -->
+  <div class="sosmed">
+    <a class="wa" href="#" onclick="waKlik()">WhatsApp</a>
+    <a class="ig" href="https://www.instagram.com/aysfresh_store" target="_blank">Instagram</a>
+    <a class="fb" href="https://facebook.com/username_kamu" target="_blank">Facebook</a>
+  </div>
+
+  <!-- MAP -->
+  <div class="map">
+    <iframe 
+      src="https://maps.google.com/maps?q=Jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed">
+    </iframe>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2026 aysfresh_store</p>
+</footer>
+
+<script>
+function waKlik() {
+  let no = "6281380085810";
+  let pesan = "Halo, saya tertarik dengan buket bunga di aysfresh_store";
+  window.open(`https://wa.me/${no}?text=${encodeURIComponent(pesan)}`);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  background: #ff6f91;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* NAVBAR */
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('gambar_wallpaper.jpg') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  max-width: 600px;
+  animation: fadeIn 2s ease;
+}
+
+.hero h1 {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #ff6f91;
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  color: #ff6f91;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span>aysfresh_store</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">Tentang</a>
+    <a href="product.html">Produk</a>
+    <a href="contact.html">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Buket Bunga Cantik untuk Setiap Momen</h1>
+    <p>
+      Hadirkan kebahagiaan melalui rangkaian bunga terbaik untuk wisuda,
+      ulang tahun, dan momen spesial lainnya.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>

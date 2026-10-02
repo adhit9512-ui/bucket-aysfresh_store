@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - aysfresh_store</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #fff7f9;
+        }
+
+        /* HEADER */
+        header {
+            background: #ff6f91;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        /* NAV */
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* SECTION */
+        section {
+            text-align: center;
+            padding: 40px;
+        }
+
+        section h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        /* PRODUK */
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* CARD */
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 230px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+            background: white;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card h3 {
+            padding: 10px 10px 5px;
+            margin: 0;
+            color: #333;
+        }
+
+        /* DESKRIPSI */
+        .description {
+            padding: 0 15px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #666;
+            min-height: 65px;
+        }
+
+        /* PRICE */
+        .price {
+            color: #ff6f91;
+            font-weight: bold;
+            display: none;
+            margin-bottom: 10px;
+        }
+
+        /* BUTTON */
+        button {
+            background: #ff6f91;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            border-radius: 8px;
+            width: 80%;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #ff4f7a;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+
+            section {
+                padding: 30px 15px;
+            }
+
+            .card {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h2>aysfresh_store</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Tentang</a>
+            <a href="product.html">Produk</a>
+            <a href="contact.html">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- PRODUK -->
+    <section>
+        <h2>Produk Kami</h2>
+        <p class="subtitle">
+            Pilihan buket bunga untuk berbagai momen spesial Anda.
+        </p>
+
+        <div class="products">
+
+            <!-- PRODUK 1 -->
+            <div class="card">
+                <img 
+                    src="gambar/gambar_1.jpeg" 
+                    alt="Buket Mawar dengan bunga mawar sebagai hadiah untuk orang tersayang"
+                >
+
+                <h3>Buket Mawar</h3>
+
+                <p class="description">
+                    Buket bunga mawar yang cocok diberikan sebagai hadiah
+                    untuk pasangan, keluarga, maupun orang tersayang.
+                </p>
+
+                <p class="price">Rp 150.000</p>
+
+                <button onclick="tampilHarga(this, 'Buket Mawar', 150000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+
+            <!-- PRODUK 2 -->
+            <div class="card">
+                <img 
+                    src="gambar/gambar_2.jpeg" 
+                    alt="Buket Wisuda dengan rangkaian bunga untuk hadiah kelulusan"
+                >
+
+                <h3>Buket Wisuda</h3>
+
+                <p class="description">
+                    Buket khusus untuk merayakan momen wisuda dan kelulusan.
+                    Cocok diberikan kepada teman, pasangan, atau keluarga.
+                </p>
+
+                <p class="price">Rp 120.000</p>
+
+                <button onclick="tampilHarga(this, 'Buket Wisuda', 120000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+
+            <!-- PRODUK 3 -->
+            <div class="card">
+                <img 
+                    src="gambar/gambar_3.jpeg" 
+                    alt="Buket Ulang Tahun dengan rangkaian bunga sebagai hadiah ulang tahun"
+                >
+
+                <h3>Buket Ulang Tahun</h3>
+
+                <p class="description">
+                    Buket bunga yang dapat digunakan sebagai hadiah ulang tahun
+                    untuk membuat hari spesial menjadi lebih berkesan.
+                </p>
+
+                <p class="price">Rp 100.000</p>
+
+                <button onclick="tampilHarga(this, 'Buket Ulang Tahun', 100000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+
+            <!-- PRODUK 4 -->
+            <div class="card">
+                <img 
+                    src="gambar/gambar_4.jpeg" 
+                    alt="Buket Anniversary dengan rangkaian bunga romantis untuk pasangan"
+                >
+
+                <h3>Buket Anniversary</h3>
+
+                <p class="description">
+                    Buket bunga dengan nuansa romantis yang cocok diberikan
+                    kepada pasangan untuk merayakan hari anniversary.
+                </p>
+
+                <p class="price">Rp 200.000</p>
+
+                <button onclick="tampilHarga(this, 'Buket Anniversary', 200000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+
+            <!-- PRODUK 5 -->
+            <div class="card">
+                <img 
+                    src="gambar/gambar_5.jpeg" 
+                    alt="Buket Premium dengan rangkaian bunga yang elegan dan mewah"
+                >
+
+                <h3>Buket Premium</h3>
+
+                <p class="description">
+                    Buket premium dengan tampilan elegan yang cocok untuk
+                    berbagai acara spesial dan hadiah istimewa.
+                </p>
+
+                <p class="price">Rp 250.000</p>
+
+                <button onclick="tampilHarga(this, 'Buket Premium', 250000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+
+            <!-- PRODUK 6 -->
+            <div class="card">
+                <img
+                    src="gambar/gambar_6.jpeg"
+                    alt="Buket Cokelat Ungu"
+                >
+
+                <h3>Buket Cokelat Ungu</h3>
+
+                <p class="description">
+                    Buket cokelat dengan perpaduan bunga yang cantik, cocok sebagai hadiah untuk orang tersayang.
+                </p>
+
+                <p class="price">Rp 300.000</p>
+
+                <button onclick="tampilHarga(this, 'Buket Cokelat Ungu', 300000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+
+             <!-- PRODUK 7 -->
+            <div class="card">
+                <img 
+                    src="gambar/gambar_9.jpeg" 
+                    alt="Buket Uang Merah"
+                >
+
+                <h3>Buket Uang Merah</h3>
+
+                <p class="description">
+                    Buket uang dengan dekorasi bunga yang menarik, cocok diberikan sebagai hadiah di berbagai acara spesial.
+                </p>
+
+                <p class="price">Rp 300.000</p>
+
+                <button onclick="tampilHarga(this, 'Buket Uang Merah', 300000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+            <!-- PRODUK 8 -->
+            <div class="card">
+                <img 
+                    src="gambar/gambar_8.jpeg" 
+                    alt="Buket Uang Biru"
+                >
+
+                <h3>Buket Uang Biru</h3>
+
+                <p class="description">
+                    Buket uang dengan dekorasi bunga yang menarik, cocok diberikan sebagai hadiah di berbagai acara spesial.
+                </p>
+
+                <p class="price">Rp 300.000</p>
+
+                <button onclick="tampilHarga(this, 'Buket Uang Biru', 300000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+            <!-- PRODUK 9 -->
+            <div class="card">
+                <img 
+                    src="gambar/gambar_10.jpeg" 
+                    alt="Buket Bunga Cantik"
+                >
+
+                <h3>Buket Bunga Cantik</h3>
+
+                <p class="description">
+                    Rangkaian bunga dengan warna yang cerah dan indah, cocok untuk memberikan kejutan kepada orang spesial.
+                </p>
+
+                <p class="price">Rp 300.000</p>
+
+                <button onclick="tampilHarga(this, 'Buket Bunga Cantik', 350000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+            <!-- PRODUK 10 -->
+            <div class="card">
+                <img
+                    src="gambar/gambar_7.jpeg"
+                    alt="Buket Cokelat Biru"
+                >
+
+                <h3>Buket Cokelat Biru</h3>
+
+                <p class="description">
+                    Buket cokelat dengan perpaduan bunga yang cantik, cocok sebagai hadiah untuk orang tersayang.
+                </p>
+
+                <p class="price">Rp 300.000</p>
+
+                <button onclick="tampilHarga(this, 'Buket Cokelat Biru', 200000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+            <!-- PRODUK 11 -->
+            <div class="card">
+                <img
+                    src="gambar/gambar_11.jpeg"
+                    alt="Bingkai Kenangan Wisuda"
+                >
+
+                <h3>Bingkai Kenangan Wisuda</h3>
+
+                <p class="description">
+                    Bingkai kenangan untuk wisuda, cocok untuk menyimpan kenangan indah.
+                </p>
+
+                <p class="price">Rp 200.000</p>
+
+                <button onclick="tampilHarga(this, 'Bingkai Kenangan Wisuda', 200000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+            <!-- PRODUK 12 -->
+            <div class="card">
+                <img
+                    src="gambar/gambar_12.jpeg"
+                    alt="Bingkai Kolase Foto"
+                >
+
+                <h3>Bingkai Kolase Foto</h3>
+
+                <p class="description">
+                    Bingkai kolase foto untuk menyimpan kenangan indah.
+                </p>
+
+                <p class="price">Rp 300.000</p>
+
+                <button onclick="tampilHarga(this, 'Bingkai Kolase Foto', 300000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+            <!-- PRODUK 13 -->
+            <div class="card">
+                <img
+                    src="gambar/gambar_13.jpeg"
+                    alt="Bingkai Pernikahan"
+                >
+
+                <h3>Bingkai Pernikahan</h3>
+
+                <p class="description">
+                    Bingkai pernikahan untuk menyimpan kenangan indah.
+                </p>
+
+                <p class="price">Rp 300.000</p>
+
+                <button onclick="tampilHarga(this, 'Bingkai Pernikahan', 300000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+            <!-- PRODUK 14 -->
+            <div class="card">
+                <img
+                    src="gambar/gambar_14.jpeg"
+                    alt="Bingkai Kelulusan"
+                >
+
+                <h3>Bingkai Kelulusan</h3>
+
+                <p class="description">
+                    Bingkai kelulusan untuk menyimpan kenangan indah.
+                </p>
+
+                <p class="price">Rp 300.000</p>
+
+                <button onclick="tampilHarga(this, 'Bingkai Kelulusan', 300000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+            <!-- PRODUK 15 -->
+            <div class="card">
+                <img
+                    src="gambar/gambar_15.jpeg"
+                    alt="Bingkai Kelahiran"
+                >
+
+                <h3>Bingkai Kelahiran</h3>
+
+                <p class="description">
+                    Bingkai kelahiran untuk menyimpan kenangan indah.
+                </p>
+
+                <p class="price">Rp 300.000</p>
+
+                <button onclick="tampilHarga(this, 'Bingkai Kelahiran', 300000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+            <!-- PRODUK 16 -->
+            <div class="card">
+                <img
+                    src="gambar/gambar_16.jpeg"
+                    alt="Bingkai Kenangan Spesial"
+                >
+
+                <h3>Bingkai Kenangan Spesial</h3>
+
+                <p class="description">
+                    Bingkai kenangan spesial untuk menyimpan kenangan indah.
+                </p>
+
+                <p class="price">Rp 300.000</p>
+
+                <button onclick="tampilHarga(this, 'Bingkai Kenangan Spesial', 300000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+            <!-- PRODUK 17 -->
+            <div class="card">
+                <img
+                    src="gambar/gambar_17.jpeg"
+                    alt="Bingkai Pernikahan"
+                >
+
+                <h3>Buket Exclusive</h3>
+
+                <p class="description">
+                    Buket eksklusif dengan desain yang lebih istimewa,
+                    cocok untuk memberikan kesan spesial kepada penerima.
+                </p>
+
+                <p class="price">Rp 300.000</p>
+
+                <button onclick="tampilHarga(this, 'Buket Exclusive', 300000)">
+                    Lihat Harga
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 aysfresh_store</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function tampilHarga(btn, nama, harga) {
+
+            let card = btn.parentElement;
+            let price = card.querySelector(".price");
+
+            // Menampilkan harga
+            price.style.display = "block";
+
+            // Mengubah tombol menjadi tombol pesan
+            if (btn.innerText === "Pesan Sekarang") {
+                return;
+            }
+
+            btn.innerText = "Pesan Sekarang";
+
+            btn.onclick = function () {
+
+                let no = "6281380085810";
+
+                let text =
+                    "Halo, saya ingin memesan " +
+                    nama +
+                    " dengan harga Rp " +
+                    harga.toLocaleString("id-ID");
+
+                window.open(
+                    "https://wa.me/" +
+                    no +
+                    "?text=" +
+                    encodeURIComponent(text),
+                    "_blank"
+                );
+            };
+        }
+    </script>
+
+</body>
+</html>
